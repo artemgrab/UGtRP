@@ -1,0 +1,116 @@
+:root {
+    box-sizing: border-box;
+    background: #1E1E1E;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+.layout_container {
+    /* max-width: 1360px; */
+    margin: 0 120px 0 120px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin: 0;
+}
+
+nav > ul > li > a {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+nav > ul > li > a:hover {
+    color: #D1D1D1;
+    border-bottom: 2px solid #D1D1D1;
+    border-radius: 0.5px;  
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+nav > ul > li {
+    margin-top: 47px;
+    display: flex;
+    float: right;
+}
+
+.layout_header {
+    display: flex;
+    align-items: center;
+}
+
+.layout_header > a > img {
+    margin-top: 47px;
+}
+
+li + li {
+    margin-left : 80px;
+}
+
+nav {
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+header {
+    background: url("../img/background.png") no-repeat center center fixed; 
+    background-size: cover;
+    height: 743px;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: 900;
+    margin-top: 0;
+}
+
+.welcome-block {
+    width: 495px;
+    margin-top: 164px;
+}
+
+.welcome-block > h3 {
+    margin-top: 21px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #E5DCDC;
+    margin-bottom: 64px;
+}
+
+.welcome-block > a {
+    padding: 16.5px 89px 16.5px 89px;
+    color: #021935;
+    background-color: #F6A127;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 27px;
+}
