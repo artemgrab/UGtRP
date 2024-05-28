@@ -19,10 +19,30 @@ function f2() {
 function f3() {
 
 }
+function f4() {
+    if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+    } 
+    else if (document.body.onclick) {
+        dropdownContent.style.display = "none";
+    }
+    else {
+        dropdownContent.style.display = "block";
+    }
+    
+}
+
+
+// function f5() {
+//     dropdownContent.style.display = "none";
+// }
+
 
 
 document.querySelector('#b-1').onclick = f1;
 document.querySelector('#b-2').onclick = f2;
+document.querySelector('#dropdownImg').onclick = f4;
+document.body.onclick = f5;
 
 
 
