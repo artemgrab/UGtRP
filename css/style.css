@@ -82,9 +82,7 @@ nav {
 }
 
 header {
-    background: url("../img/background.png") no-repeat center center fixed; 
-    background-size: cover;
-    height: 743px;
+    
 }
 
 h1 {
@@ -94,19 +92,26 @@ h1 {
 }
 
 .welcome-block {
-    width: 505px;
-    margin-top: 164px;
+    background: url("../img/background.png") no-repeat center center fixed; 
+    background-size: cover;
+    height: 608px;
+
 }
 
-.welcome-block > h3 {
+.welcome-block > .layout_container > h3 {
     margin-top: 21px;
     font-size: 20px;
     font-weight: 400;
     color: #E5DCDC;
     margin-bottom: 64px;
 }
+.welcome-block > .layout_container {
+    padding-top: 150px;
+    max-width: 505px;
+    padding-bottom: 0;
+}
 
-.welcome-block > a {
+.welcome-block > .layout_container > a {
     padding: 16.5px 89px 16.5px 89px;
     color: #021935;
     background-color: #F6A127;
@@ -117,7 +122,7 @@ h1 {
     box-shadow: 0px 5px 10.2px 0px rgba(243, 139, 17, 0.4);
 }
 
-.welcome-block > a:hover {
+.welcome-block > .layout_container > a:hover {
     background-color: #F89E1E;
 }
 
@@ -479,12 +484,12 @@ nav > ul > li > button {
 }
 
 
-.dropdown {
+/* .dropdown {
     position: relative;
     display: inline-block;
-}
+} */
 
-.dropdown-content {
+/* .dropdown-content {
     display: none;
     position: absolute;
     background-color: #222222;
@@ -511,4 +516,57 @@ nav > ul > li > button {
 
 .dropdown-content > .top-a {
     margin-top: 0;
+} */
+
+
+.mainmenubtn {
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+    display: none;
+    position: absolute;
+    background-color: #222222;
+    padding: 11px 18px;
+    max-width: 132px;
+    z-index: 1;
+    border-radius: 15px;
+    left: -97px;
+    text-align: center;
+}
+.dropdown-child > a {
+    color: #ffffff;
+    margin-top: 9px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.dropdown-child > a:hover {
+    color: #969696;
+
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+.dropdown-child > .top-a {
+    margin-top: 0;
+}
+
+/* body > header > .layout_container > .layout_header{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+} */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: #141414;
+    padding-bottom: 35px;
 }

@@ -19,30 +19,28 @@ function f2() {
 function f3() {
 
 }
-function f4() {
-    if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-    } 
-    else if (document.body.onclick) {
-        dropdownContent.style.display = "none";
-    }
-    else {
-        dropdownContent.style.display = "block";
-    }
-    
-}
 
 
-// function f5() {
-//     dropdownContent.style.display = "none";
-// }
 
 
 
 document.querySelector('#b-1').onclick = f1;
 document.querySelector('#b-2').onclick = f2;
-document.querySelector('#dropdownImg').onclick = f4;
-document.body.onclick = f5;
 
 
+// window.onscroll = function() {myFunction()};
 
+// // Get the header
+// let header = document.getElementById("header");
+
+// // Get the offset position of the navbar
+// let sticky = header.offsetTop;
+
+// // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// function myFunction() {
+//   if (window.pageYOffset > sticky) {
+//     header.classList.add("sticky");
+//   } else {
+//     header.classList.remove("sticky");
+//   }
+// }
