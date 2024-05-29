@@ -111,8 +111,19 @@ h1 {
     padding-bottom: 0;
 }
 
-.welcome-block > .layout_container > a {
+.button-download {
     padding: 16.5px 89px 16.5px 89px;
+    color: #021935;
+    background-color: #F6A127;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 27px;
+    box-shadow: 0px 4px 10.2px #F38B11 0.6;
+    box-shadow: 0px 5px 10.2px 0px rgba(243, 139, 17, 0.4);
+}
+
+.button-download-en {
+    padding: 16.5px 78.5px 16.5px 78.5px;
     color: #021935;
     background-color: #F6A127;
     font-size: 16px;
@@ -127,7 +138,7 @@ h1 {
 }
 
 .news {
-    margin-top: 49px;
+    margin-top: 28px;
 }
 
 .grid {
@@ -147,8 +158,8 @@ h1 {
 }
 
 .item-1 {
-    margin-left: 0;
-    padding-left: 15px;
+    margin-left: 15px;
+    /* padding-left: 15px; */
 
 }
 
@@ -161,6 +172,7 @@ h1 {
     -moz-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     -webkit-transition: all 1s ease-out;
+    position: relative;
 }
 .news-1-top:hover {
     -webkit-transform: scale(1.1);
@@ -200,8 +212,15 @@ h1 {
     background-size: cover;
     background-position: center;
     border-radius: 48px 48px 0 0;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
 }
-
+.news-2-top:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
 .news-2-bottom {
     padding: 22px 20px 19px 20px;
     background-color: #161616;
@@ -238,8 +257,25 @@ h1 {
     border-radius: 0.5px;  
     display: inline;
 }
+.news-text {
+    font-size: 24px;
+    font-weight: 700;
+    
+}
+.text {
+    margin-top: 49px;
+    
+}
 
 .desc_block_guns {
+    background: rgb(247,171,40);
+    background: linear-gradient(-76deg, rgba(247,171,40,1) 0%, rgba(233,95,42,1) 57%100%);
+    margin-top: 67px;
+    height: 410px;
+    width: 100%;
+
+}
+.desc_block_furniture {
     background: rgb(247,171,40);
     background: linear-gradient(-76deg, rgba(247,171,40,1) 0%, rgba(233,95,42,1) 57%100%);
     margin-top: 67px;
@@ -299,6 +335,57 @@ h1 {
     margin-left : 8px;
 }
 
+/* ////////// */
+.desc_block_furniture > .layout_container > .wrapper > .desc-text > ul {
+    display: flex;
+}
+
+.desc_block_furniture > .layout_container > .wrapper > .desc-text > ul > li + li {
+    margin-left : 22px;
+}
+
+.desc_block_furniture > .layout_container > .wrapper > .desc-text > ul > li {
+    font-size: 14px;
+    color: #F5F5F5;
+    letter-spacing: 2%;
+    margin: 0;
+    margin-top: 11px;
+    
+}
+
+.desc_block_furniture > .layout_container > .wrapper > .desc-text > h1 {
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-top: 58px;
+}
+
+.desc_block_furniture > .layout_container > .wrapper > .desc-text > p {
+    font-size: 18px;
+    margin-top: 55px;
+    margin-bottom: 0;
+}
+
+.desc_block_furniture > .layout_container > .wrapper > .desc-text > .buttons {
+    margin-top: 147px;
+    padding-bottom: 50px;
+}
+
+.desc_block_furniture > .layout_container > .wrapper > .desc-text >.buttons > li > button {
+    background: #D74C16;
+    border-radius: 7px;
+    width: 140px;
+    height:12px;
+    border: none;
+}
+
+.desc_block_furniture > .layout_container > .wrapper > .desc-text > .buttons > li > .b-active {
+    background-color: #AF3100;
+}
+
+.desc_block_furniture > .layout_container > .wrapper > .desc-text > .buttons > li + li {
+    margin-left : 8px;
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -306,6 +393,11 @@ h1 {
 
 .img-guns {
     margin-top: -130px;
+    margin-left: auto;
+    margin-right: 0;
+}
+.img-furniture {
+    margin-top: 30px;
     margin-left: auto;
     margin-right: 0;
 }
@@ -535,7 +627,7 @@ nav > ul > li > button {
     max-width: 132px;
     z-index: 1;
     border-radius: 15px;
-    left: -97px;
+    left: -75px;
     text-align: center;
 }
 .dropdown-child > a {
@@ -569,4 +661,18 @@ header {
     z-index: 99;
     background-color: #141414;
     padding-bottom: 35px;
+}
+
+/* .error {
+    font-size: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+     */
+
+.layout_container > h4 {
+    font-size: 100px;
+    text-align: center;
+
 }
