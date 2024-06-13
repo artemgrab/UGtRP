@@ -1,6 +1,7 @@
 let guns = document.querySelector('.desc_block_guns')
 let furniture = document.querySelector('.desc_block_furniture')
-let partners = document.querySelector('.layout_grid')
+let partner1 = document.querySelector('.block-partner-1')
+let partner2 = document.querySelector('.block-partner-2')
 let button = document.querySelector('#button-partners')
 
 function f1() {
@@ -32,8 +33,45 @@ function f4() {
     guns.classList.add('hide');
     furniture.classList.remove('hide');
 }
+
+
 function f5() {
-    partners.classList.toggle('none')
+    if (partner2.classList.contains('none')) {
+        partner1.classList.toggle('none')
+        partner1.classList.add('last')
+    }
+    else if(partner1.classList.contains('none')){
+        partner2.classList.toggle('none')
+        partner2.classList.add('last')
+    }
+    else if (partner2.classList.contains('last') && partner1.classList.contains('none') && partner2.classList.contains('none')){
+        partner2.classList.toggle('none')
+        partner2.classList.remove('last')
+    }
+    else if (partner1.classList.contains('last') && partner2.classList.contains('none')){
+        partner1.classList.toggle('none')
+        partner1.classList.remove('last')
+    }
+    
+}
+
+
+
+function f6() {
+    partner1.classList.remove('none')
+    partner2.classList.add('none')
+}
+function f7() {
+    partner1.classList.add('none')
+    partner2.classList.remove('none')
+}
+function f8() {
+    partner1.classList.remove('none')
+    partner2.classList.add('none')
+}
+function f9() {
+    partner1.classList.add('none')
+    partner2.classList.remove('none')
 }
 
 
@@ -44,6 +82,12 @@ document.querySelector('#b-2').onclick = f2;
 document.querySelector('#b2-1').onclick = f3;
 document.querySelector('#b2-2').onclick = f4;
 document.querySelector('#button-partners').onclick = f5;
+
+document.querySelector('#block-1').onclick = f6;
+document.querySelector('#block-2').onclick = f7;
+document.querySelector('#block-1-2').onclick = f8;
+document.querySelector('#block-2-2').onclick = f9;
+
 
 
 let news = document.querySelectorAll('.new')
