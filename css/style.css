@@ -42,12 +42,17 @@ nav > ul > li > a {
     font-family: Arial, sans-serif;
     font-size: 16px;
     letter-spacing: 2px;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
 }
 
 nav > ul > li > a:hover {
     color: #D1D1D1;
     border-bottom: 2px solid #D1D1D1;
-    border-radius: 0.5px;  
+    border-radius: 0.5px;
+    font-size: 16.4px;  
 }
 
 nav > ul {
@@ -120,6 +125,10 @@ h1 {
     border-radius: 27px;
     box-shadow: 0px 4px 10.2px #F38B11 0.6;
     box-shadow: 0px 5px 10.2px 0px rgba(243, 139, 17, 0.4);
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
 }
 
 .button-download-en {
@@ -134,7 +143,8 @@ h1 {
 }
 
 .welcome-block > .layout_container > a:hover {
-    background-color: #F89E1E;
+    background-color: #F08231;
+    
 }
 
 .news {
@@ -175,9 +185,10 @@ h1 {
     position: relative;
 }
 .news-1-top:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    border-radius: 88px 88px 0 0;
 }
 
 .news-1-bottom {
@@ -217,9 +228,10 @@ h1 {
     -webkit-transition: all 1s ease-out;
 }
 .news-2-top:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    border-radius: 88px 88px 0 0;
 }
 .news-2-bottom {
     padding: 22px 20px 19px 20px;
@@ -325,7 +337,9 @@ h1 {
     width: 140px;
     height:12px;
     border: none;
+    cursor: pointer;
 }
+
 
 .desc_block_guns > .layout_container > .wrapper > .desc-text > .buttons > li > .b-active {
     background-color: #AF3100;
@@ -376,6 +390,7 @@ h1 {
     width: 140px;
     height:12px;
     border: none;
+    cursor: pointer;
 }
 
 .desc_block_furniture > .layout_container > .wrapper > .desc-text > .buttons > li > .b-active {
@@ -609,7 +624,11 @@ nav > ul > li > button {
 }
 .dropdown:hover .dropdown-child {
     display: block;
+    
 }
+
+
+
 
 .dropdown-child > .top-a {
     margin-top: 0;
@@ -663,3 +682,88 @@ header {
 .layout_grid {
     transition: 0.5s;
 }
+
+
+.news-3-top {
+    height: 205px;
+    background-image: url("../img/news-3.png"); ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 48px 48px 0 0;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    position: relative;
+}
+.news-3-top:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    border-radius: 88px 88px 0 0;
+}
+
+.news-3-bottom {
+    padding: 22px 20px 19px 20px;
+    background-color: #161616;
+    border-radius: 0 0 20px 20px;
+}
+
+.news-3-bottom > h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.news-3-bottom > p {
+    font-size: 17px;
+    margin-top: 16px;
+    margin-bottom: 38px;
+    line-height: 137.2%;
+}
+
+.news-3-bottom > .date {
+    margin: 0;
+    color: #969696;
+    font-size: 15px;
+    font-style: italic;
+}
+
+
+.container-swiper > .swiper > .swiper-wrapper > .swiper-slide {
+    /* text-align: center; */
+    /* font-size: 18px; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 359px;
+    
+  }
+
+  /* .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+
+  .swiper-wrapper{
+    /* display: flex;
+    align-items: stretch;
+    max-height: 409px; */
+    display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns: 1fr;
+grid-gap: 10px;
+
+    cursor: grabbing;
+  }
+
+  .container-swiper {
+    margin-left: 120px;
+    margin-top: 28px;
+  }
+
+  .news-main {
+    height: 409px;
+    overflow: hidden;
+  }

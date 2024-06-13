@@ -7,6 +7,7 @@ function f1() {
     console.log(1)
     guns.classList.remove('hide');
     furniture.classList.add('hide');
+    
 
 }
 
@@ -33,9 +34,7 @@ function f4() {
 }
 function f5() {
     partners.classList.toggle('none')
-
 }
-
 
 
 
@@ -47,3 +46,16 @@ document.querySelector('#b2-2').onclick = f4;
 document.querySelector('#button-partners').onclick = f5;
 
 
+let news = document.querySelectorAll('.new')
+
+
+new Swiper('.swiper-slider')
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
