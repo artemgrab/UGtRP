@@ -441,11 +441,17 @@ h1 {
     content: "";
     display: block;
     background: url('../img/arrow-down.png') no-repeat;
-    width: 37px;
-    height: 29px;
+    width: 31px;
+    height: 22px;
     float: right;
     margin-left: 9px;
     margin-top: 7px;
+    transition: transform 0.3s ease-out;
+}
+
+#button-partners.rotated:after {
+    transform: rotate(180deg);
+    margin-top: 4px;
 }
 
 
@@ -534,12 +540,32 @@ h1 {
     float: left;
 }
 
+.ds:before{
+    content: "";
+    display: block;
+    background: url('../img/icon-ds.png') no-repeat;
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-top: -2px;
+}
+
 .switch-block > button {
     width: 133px;
-    height: 6px;
+    height: 7px;
     background-color: #AFAFAF;
     border: none;
     border-radius: 7px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+.switch-block > button:hover {
+    
+    background-color: #AFAFAF;
+
 }
 .switch-block  {
     margin-top: 33px;
@@ -550,6 +576,11 @@ h1 {
 
 .switch-block > .block-2 {
     margin-left: 11px;
+    background-color: #575757;
+}
+
+.switch-block > .block-1-2 {
+    margin-right: 11px;
     background-color: #575757;
 }
 
@@ -758,12 +789,27 @@ grid-gap: 10px;
     cursor: grabbing;
   }
 
-  .container-swiper {
+.container-swiper {
     margin-left: 120px;
     margin-top: 28px;
-  }
+}
 
-  .news-main {
+.news-main {
     height: 409px;
     overflow: hidden;
-  }
+}
+
+.block-partner-1, .block-partner-2 {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.block-partner-1.show, .block-partner-2.show {
+    max-height: 1000px; /* Adjust this value according to the content's maximum height */
+    display: block;
+}
+
+.switch-block button {
+    cursor: pointer;
+}
