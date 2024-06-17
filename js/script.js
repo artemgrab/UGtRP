@@ -1,71 +1,69 @@
 let guns = document.querySelector('.desc_block_guns')
 let furniture = document.querySelector('.desc_block_furniture')
+let clothes = document.querySelector('.desc_block_clothes')
 let partner1 = document.querySelector('.block-partner-1')
 let partner2 = document.querySelector('.block-partner-2')
 let button = document.querySelector('#button-partners')
 
-function f1() {
-    console.log(1)
-    guns.classList.remove('hide');
-    furniture.classList.add('hide');
-    
+let b1 = document.querySelectorAll('#b-1');
+let b2 = document.querySelectorAll('#b-2');
+let b3 = document.querySelectorAll('#b-3');
 
+function showBlock(blockIndex) {
+    if (blockIndex === 1) {
+        console.log(1);
+        guns.classList.remove('hide');
+        furniture.classList.add('hide');
+        clothes.classList.add('hide');
+    } else if (blockIndex === 2) {
+        console.log(2);
+        guns.classList.add('hide');
+        furniture.classList.remove('hide');
+        clothes.classList.add('hide');
+    } else if (blockIndex === 3) {
+        console.log(3);
+        guns.classList.add('hide');
+        furniture.classList.add('hide');
+        clothes.classList.remove('hide');
+    }
 }
 
+let currentBlock = 1;
+let totalBlocks = 3;
 
-function f2() {
-    console.log(2)
-    guns.classList.add('hide');
-    furniture.classList.remove('hide');
+function cycleBlocks() {
+    showBlock(currentBlock);
+    currentBlock++;
+    if (currentBlock > totalBlocks) {
+        currentBlock = 1;
+    }
 }
 
+// Initially show the first block
+showBlock(currentBlock);
 
-function f3() {
+// Set up the interval to cycle through blocks every 20 seconds
+setInterval(cycleBlocks, 8000);
 
-    console.log(1)
-    guns.classList.remove('hide');
-    furniture.classList.add('hide');
-
-    
+// Optional: add event listeners if you still want manual control
+for (let i = 0; i < b1.length; i++) {
+    b1[i].addEventListener('click', function() {
+        currentBlock = 1;
+        showBlock(currentBlock);
+    });
 }
-function f4() {
-    console.log(2)
-    guns.classList.add('hide');
-    furniture.classList.remove('hide');
+for (let i = 0; i < b2.length; i++) {
+    b2[i].addEventListener('click', function() {
+        currentBlock = 2;
+        showBlock(currentBlock);
+    });
 }
-
-
-// function f5() {
-//     if (partner2.classList.contains('none')) {
-//         partner1.classList.toggle('none')
-//         partner1.classList.add('last')
-//     }
-//     else if(partner1.classList.contains('none')){
-//         partner2.classList.toggle('none')
-//         partner2.classList.add('last')
-//     }
-//     else if (partner2.classList.contains('last') && partner1.classList.contains('none') && partner2.classList.contains('none')){
-//         partner2.classList.toggle('none')
-//         partner2.classList.remove('last')
-//     }
-//     else if (partner1.classList.contains('last') && partner2.classList.contains('none')){
-//         partner1.classList.toggle('none')
-//         partner1.classList.remove('last')
-//     }
-    
-// }
-
-// document.getElementById('button-partners').addEventListener('click', function() {
-//     var partnersList = document.getElementById('list');
-//     if (partnersList.classList.contains('show')) {
-//         partnersList.classList.remove('show');
-//         this.setAttribute('aria-expanded', 'false');
-//     } else {
-//         partnersList.classList.add('show');
-//         this.setAttribute('aria-expanded', 'true');
-//     }
-// });
-
+for (let i = 0; i < b3.length; i++) {
+    b3[i].addEventListener('click', function() {
+        currentBlock = 3;
+        showBlock(currentBlock);
+    });
+}
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -149,11 +147,7 @@ function f9() {
 
 
 
-document.querySelector('#b-1').onclick = f1;
-document.querySelector('#b-2').onclick = f2;
-document.querySelector('#b2-1').onclick = f3;
-document.querySelector('#b2-2').onclick = f4;
-// document.querySelector('#button-partners').onclick = f5;
+
 
 document.querySelector('#block-1').onclick = f6;
 document.querySelector('#block-2').onclick = f7;
@@ -165,7 +159,6 @@ document.querySelector('#block-2-2').onclick = f9;
 let news = document.querySelectorAll('.new')
 
 
-new Swiper('.swiper-slider')
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",

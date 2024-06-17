@@ -295,6 +295,14 @@ h1 {
     width: 100%;
 
 }
+.desc_block_clothes {
+    background: rgb(247,171,40);
+    background: linear-gradient(-76deg, rgba(247,171,40,1) 0%, rgba(233,95,42,1) 57%100%);
+    margin-top: 67px;
+    height: 410px;
+    width: 100%;
+
+}
 
 
 .desc_block_guns > .layout_container > .wrapper > .desc-text > ul {
@@ -400,6 +408,62 @@ h1 {
 .desc_block_furniture > .layout_container > .wrapper > .desc-text > .buttons > li + li {
     margin-left : 8px;
 }
+/* ////////////////////////// */
+
+.desc_block_clothes > .layout_container > .wrapper > .desc-text > ul {
+    display: flex;
+}
+
+.desc_block_clothes > .layout_container > .wrapper > .desc-text > ul > li + li {
+    margin-left : 22px;
+}
+
+.desc_block_clothes > .layout_container > .wrapper > .desc-text > ul > li {
+    font-size: 14px;
+    color: #F5F5F5;
+    letter-spacing: 2%;
+    margin: 0;
+    margin-top: 11px;
+    
+}
+
+.desc_block_clothes > .layout_container > .wrapper > .desc-text > h1 {
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-top: 58px;
+}
+
+.desc_block_clothes > .layout_container > .wrapper > .desc-text > p {
+    font-size: 18px;
+    margin-top: 55px;
+    margin-bottom: 0;
+}
+
+.desc_block_clothes > .layout_container > .wrapper > .desc-text > .buttons {
+    margin-top: 147px;
+    padding-bottom: 50px;
+}
+
+.desc_block_clothes > .layout_container > .wrapper > .desc-text >.buttons > li > button {
+    background: #D74C16;
+    border-radius: 7px;
+    width: 140px;
+    height:12px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.desc_block_clothes > .layout_container > .wrapper > .desc-text > .buttons > li > .b-active {
+    background-color: #AF3100;
+}
+
+.desc_block_clothes > .layout_container > .wrapper > .desc-text > .buttons > li + li {
+    margin-left : 8px;
+}
+
+
+
 
 .wrapper {
     display: grid;
@@ -446,7 +510,7 @@ h1 {
     float: right;
     margin-left: 9px;
     margin-top: 7px;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.2s ease-out;
 }
 
 #button-partners.rotated:after {
@@ -692,6 +756,9 @@ header {
     text-align: center;
 
 }
+#b-1:hover {
+    background-color: #AF3100;
+}
 
 #b-2:hover {
     background-color: #AF3100;
@@ -699,12 +766,7 @@ header {
 #b-3:hover {
     background-color: #AF3100;
 }
-#b2-1:hover {
-    background-color: #AF3100;
-}
-#b2-3:hover {
-    background-color: #AF3100;
-}
+
 
 .none {
     display: none;
