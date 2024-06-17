@@ -168,3 +168,20 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
   });
+
+
+
+  
+const hasVisited = localStorage.getItem('hasVisited');
+
+if(!hasVisited) {
+  
+    localStorage.setItem('hasVisited', true)
+  
+    // Do something
+  
+} else {
+  
+    // Do something else
+  
+}

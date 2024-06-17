@@ -621,10 +621,10 @@ h1 {
     border: none;
     border-radius: 7px;
     cursor: pointer;
-    -webkit-transition: all 0.3s ease;;
-    -moz-transition: all 0.3s ease;;
-    -o-transition: all 0.3s ease;;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.4s ease;;
+    -moz-transition: all 0.4s ease;;
+    -o-transition: all 0.4s ease;;
+    transition: all 0.4s ease;
 }
 .switch-block > button:hover {
     
@@ -823,31 +823,16 @@ header {
 
 
 .container-swiper > .swiper > .swiper-wrapper > .swiper-slide {
-    /* text-align: center; */
-    /* font-size: 18px; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     width: 359px;
-    
   }
 
-  /* .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
 
-  .swiper-wrapper{
-    /* display: flex;
-    align-items: stretch;
-    max-height: 409px; */
+
+.swiper-wrapper{
     display: grid;
-grid-template-rows: 1fr 1fr 1fr;
-grid-template-columns: 1fr;
-grid-gap: 10px;
-
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
     cursor: grabbing;
   }
 
@@ -874,4 +859,23 @@ grid-gap: 10px;
 
 .switch-block button {
     cursor: pointer;
+}
+
+
+
+#b-1, #b-2, #b-3 {
+    -webkit-transition: all 0.4s ease;;
+    -moz-transition: all 0.4s ease;;
+    -o-transition: all 0.4s ease;;
+    transition: all 0.4s ease;
+}
+
+.foot-tg:hover, .foot-ds:hover, .foot-mr:hover {
+    filter: brightness(70%);
+}
+.foot-tg, .foot-ds, .foot-mr {
+    -webkit-transition: all 0.6s ease;;
+    -moz-transition: all 0.6s ease;;
+    -o-transition: all 0.6s ease;;
+    transition: all 0.6s ease;
 }
