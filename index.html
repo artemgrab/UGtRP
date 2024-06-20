@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
     <title>UGtRP</title>
@@ -185,7 +186,7 @@
                         </ul>
                     </div>
                     <div class="img-clothes">
-                        <img src="" alt="">
+                        <img src="img/clothes.png" alt="">
                     </div>
                 </div>
             </div>
@@ -299,15 +300,44 @@
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      freeMode: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+        let n = 0
+        if (window.innerWidth > 1400) {
+            n=4
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: n,
+                spaceBetween: 30,
+                freeMode: true,
+                pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                },
+            });
+        }    
+
+        if (window.innerWidth <= 1400) {
+            n=3
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: n,
+                spaceBetween: 30,
+                freeMode: true,
+                pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                },
+            });
+        }
+        if (window.innerWidth <= 942 && window.innerWidth >= 768) {
+            n=2
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: n,
+                spaceBetween: 30,
+                freeMode: true,
+                pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                },
+            });
+        }
       </script>
 </body>
 </html>

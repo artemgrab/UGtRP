@@ -173,7 +173,7 @@ var swiper = new Swiper(".mySwiper", {
 
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 30,
     freeMode: true,
     pagination: {
@@ -181,3 +181,4 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
   });
+
