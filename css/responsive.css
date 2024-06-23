@@ -35,11 +35,34 @@
         /* max-width: 1360px; */
         margin: 0 120px 0 120px;
     }
+    .container-swiper > .swiper > .swiper-wrapper > .swiper-slide {
+        min-width: 300px;
+    
+      }
+      .swiper-wrapper{
+        grid-gap: 8px;
+    }
+    nav >label {
+        display: none;
+    }
+    nav >input {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .container-swiper > .swiper > .swiper-wrapper > .swiper-slide {
+        min-width: 250px;
+    
+      }
     .layout_container {
         margin: 0 80px 0 80px;
+    }
+    .container-swiper {
+        margin-left: 78px;
+    }
+    footer {
+        padding: 0 80px 0 80px;
     }
     .img-guns > img{
         width: 520px;
@@ -86,13 +109,436 @@
     nav > ul > li {
         margin-left: 40px;
     }
+    .news-main {
+        overflow: hidden;
+        max-height: 480px;
+    }
+    nav >label {
+        display: none;
+    }
+    nav >input {
+        display: none;
+    }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container-swiper > .swiper > .swiper-wrapper > .swiper-slide {
+        min-width: 200px;
+      }
+      .news-main {
+        overflow: hidden;
+        max-height: 480px;
+    }
     nav > ul {
         display: none;
     }
-    .welcome-block {
+    .welcome-block > .layout_container{
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
+    .layout_container {
+        margin: 0 30px 0 30px;
+    }
+    .layout_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;    
+        grid-gap: 10px;
+    }
+    .partner {
+        margin-top: 7px;
+    }
+    .block-partner-1.show, .block-partner-2.show {
+        max-height: 2000px; /* Adjust this value according to the content's maximum height */
+        display: block;
+    }
+    footer {
+        padding: 0 30px 0 30px;
+    }
+    .container-swiper {
+        margin-left: 30px;
+    }
+    .swiper-wrapper{
+        grid-gap: 8px;
+    }
+    .img-guns > img{
+        width: 360px;
+        margin-top: 100px;
+        margin-left: -95px;
+    }
+
+    .img-furniture > img{
+        width: 360px;
+        margin-top: 40px;
+        margin-left: -65px;
+    }
+
+    .img-clothes > img{
+        width: 360px;
+        margin-top: 20px;
+        margin-left: -65px;
+    }
+    .desc_block_guns, .desc_block_furniture, .desc_block_clothes {
+        height: 310px;
+    }
+    .desc_block_guns > .layout_container > .wrapper > .desc-text > .buttons {
+        margin-top: 50px;
+    }
+    .desc_block_furniture > .layout_container > .wrapper > .desc-text > .buttons {
+        margin-top: 50px;
+    }
+    .desc_block_clothes > .layout_container > .wrapper > .desc-text > .buttons {
+        margin-top: 50px;
+    }
+
+    .desc_block_guns > .layout_container > .wrapper > .desc-text > h1 {
+        font-weight: 700;
+        margin-bottom: 0;
+        padding-top: 48px;
+    }
+    .desc_block_furniture > .layout_container > .wrapper > .desc-text > h1 {
+        font-weight: 700;
+        margin-bottom: 0;
+        padding-top: 48px;
+    }
+    .desc_block_clothes > .layout_container > .wrapper > .desc-text > h1 {
+        font-weight: 700;
+        margin-bottom: 0;
+        padding-top: 48px;
+    }
+    /* burger */
+    nav >label {
+        display: block;
+    }
+    nav >input {
+        display: block;
+    }
+    /* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+  }
+  /* стилизуем кнопку */
+    .menu__btn {
+        display: flex; /* используем flex для центрирования содержимого */
+        align-items: center;  /* центрируем содержимое кнопки */
+        position: fixed;
+        top: 47px;
+        left: auto;
+        right: 30px;
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    /* добавляем "гамбургер" */
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #e6e2e0;
+        border-radius: 2px;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -10px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 10px;
+    }
+
+    /* контейнер меню */
+.menu__box {
+    display: flex;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    background: rgba(0,0,0,.85);
+    flex-flow: column nowrap;
+    padding-top: 140px;
+  }
+  /* элементы меню */
+  
+  .menu__item> a:hover {
+    color: #D1D1D1;
+    border-bottom: 2px solid #D1D1D1;
+    border-radius: 0.5px;
+    font-size: 18.4px;  
+  }
+  .menu__item {
+   padding: 0;
+   margin-left: 0;
+   margin-top: 30px;
+   
+  }
+  .menu__item > a{
+  
+   font-size: 18px;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  .dropdown-child {
+    display: none;
+    position: absolute;
+    background-color: #222222;
+    padding: 11px 18px;
+    max-width: 132px;
+    z-index: 1;
+    border-radius: 15px;
+    left: -45px;
+    text-align: center;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .container-swiper > .swiper > .swiper-wrapper > .swiper-slide {
+        min-width: 200px;
+      }
+      .news-main {
+        overflow: hidden;
+        max-height: 550px;
+    }
+    nav > ul {
+        display: none;
+    }
+    .welcome-block > .layout_container{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 310px;
+    }
+    .layout_container {
+        margin: 0 10px 0 10px;
+    }
+    .layout_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;    
+        grid-gap: 5px;
+    }
+    .partner {
+        margin-top: 7px;
+    }
+    .block-partner-1.show, .block-partner-2.show {
+        max-height: 2000px; /* Adjust this value according to the content's maximum height */
+        display: block;
+    }
+    footer {
+        padding: 0 10px 0 10px;
+    }
+    .container-swiper {
+        margin-left: 10px;
+    }
+    .swiper-wrapper{
+        grid-gap: 3px;
+    }
+    .img-guns > img{
+        width: 360px;
+        margin-top: 100px;
+        margin-left: -95px;
+        display: none;
+    }
+
+    .img-furniture > img{
+        width: 360px;
+        margin-top: 40px;
+        margin-left: -65px;
+        display: none;
+    }
+
+    .img-clothes > img{
+        width: 360px;
+        margin-top: 20px;
+        margin-left: -65px;
+        display: none;
+    }
+    .desc_block_guns, .desc_block_furniture, .desc_block_clothes {
+        height: 310px;
+    }
+    .desc_block_guns > .layout_container > .wrapper > .desc-text > .buttons {
+        margin-top: 50px;
+    }
+    .desc_block_furniture > .layout_container > .wrapper > .desc-text > .buttons {
+        margin-top: 50px;
+    }
+    .desc_block_clothes > .layout_container > .wrapper > .desc-text > .buttons {
+        margin-top: 50px;
+    }
+
+    .desc_block_guns > .layout_container > .wrapper > .desc-text > h1 {
+        font-weight: 700;
+        margin-bottom: 0;
+        padding-top: 48px;
+    }
+    .desc_block_furniture > .layout_container > .wrapper > .desc-text > h1 {
+        font-weight: 700;
+        margin-bottom: 0;
+        padding-top: 48px;
+    }
+    .desc_block_clothes > .layout_container > .wrapper > .desc-text > h1 {
+        font-weight: 700;
+        margin-bottom: 0;
+        padding-top: 48px;
+    }
+    /* burger */
+    nav >label {
+        display: block;
+    }
+    nav >input {
+        display: block;
+    }
+    /* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+  }
+  /* стилизуем кнопку */
+    .menu__btn {
+        display: flex; /* используем flex для центрирования содержимого */
+        align-items: center;  /* центрируем содержимое кнопки */
+        position: fixed;
+        top: 47px;
+        left: auto;
+        right: 30px;
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    /* добавляем "гамбургер" */
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #e6e2e0;
+        border-radius: 2px;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -10px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 10px;
+    }
+
+    /* контейнер меню */
+.menu__box {
+    display: flex;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    background: rgba(0,0,0,.85);
+    flex-flow: column nowrap;
+    padding-top: 140px;
+  }
+  /* элементы меню */
+  
+  .menu__item> a:hover {
+    color: #D1D1D1;
+    border-bottom: 2px solid #D1D1D1;
+    border-radius: 0.5px;
+    font-size: 18.4px;  
+  }
+  .menu__item {
+   padding: 0;
+   margin-left: 0;
+   margin-top: 30px;
+   
+  }
+  .menu__item > a{
+  
+   font-size: 18px;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  .dropdown-child {
+    display: none;
+    position: absolute;
+    background-color: #222222;
+    padding: 11px 18px;
+    max-width: 132px;
+    z-index: 1;
+    border-radius: 15px;
+    left: -45px;
+    text-align: center;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+.partner {
+    border: 7px #161616 solid;
+    border-radius: 38px;
+    padding: 28px 5px 19px 5px;
+    max-width: 300px;
+    max-height: auto;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 31px;
+}
 }

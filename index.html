@@ -16,12 +16,16 @@
             <div class="layout_header" id="header">
                 <a href=""><img src="img/logo.svg" alt="logo"></a>
                 <nav class="nav">
-                    <ul>
-                        <li><a href="index.html">Головна</a></li>
-                        <li><a href="https://drive.google.com/file/d/1dVPTbiAqyN2O4CrRArJ0OWlYJ0MXPY4D/view?usp=sharing">Список</a></li>
-                        <li><a href="">Розробники</a></li>
-                        <li><a href="index_q&a.html">Q&A</a></li>
-                        <li>
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li class="menu__item first-item"><a href="index.html">Головна</a></li>
+                        <li class="menu__item"><a href="https://drive.google.com/file/d/1dVPTbiAqyN2O4CrRArJ0OWlYJ0MXPY4D/view?usp=sharing">Список</a></li>
+                        <li class="menu__item"><a href="">Розробники</a></li>
+                        <li class="menu__item"><a href="index_q&a.html">Q&A</a></li>
+                        <li class="menu__item">
                             <div class="dropdown">
                                 <img src="img/icon-lang.png" alt="icon-lang" id="dropdownImg" class="mainmenubtn">
                                 <div class="dropdown-child">
@@ -285,27 +289,42 @@
             
     </main>
         <footer>
-            <div class="left-block-foot">
-                <img src="img/logo.svg" alt="">
-                <p>Copyright ©2024. All rights reserved</p>
-            </div>
-            <div class="right-block-foot">
-                <ul>
-                    <li><a href="https://t.me/UGtRP_t"><img src="img/tg.png" alt="" class="foot-tg"></a></li>
-                    <li><a href="https://discord.com/invite/fRFYJDzcJm"><img src="img/ds.png" alt="" class="foot-ds"></a></li>
-                    <li><a href="https://modrinth.com/resourcepack/ugtrp"><img src="img/md.png" alt="" class="foot-mr"></a></li>
-                </ul>
-            </div>
+            
+                <div class="left-block-foot">
+                    <img src="img/logo.svg" alt="">
+                    <p>Copyright ©2024. All rights reserved</p>
+                </div>
+                <div class="right-block-foot">
+                    <ul>
+                        <li><a href="https://t.me/UGtRP_t"><img src="img/tg.png" alt="" class="foot-tg"></a></li>
+                        <li><a href="https://discord.com/invite/fRFYJDzcJm"><img src="img/ds.png" alt="" class="foot-ds"></a></li>
+                        <li><a href="https://modrinth.com/resourcepack/ugtrp"><img src="img/md.png" alt="" class="foot-mr"></a></li>
+                    </ul>
+                </div>
+        
+            
         </footer>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         let n = 0
-        if (window.innerWidth > 1400) {
+        if (window.innerWidth >= 1600) {
             n=4
             var swiper = new Swiper(".mySwiper", {
                 slidesPerView: n,
                 spaceBetween: 30,
+                freeMode: true,
+                pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                },
+            });
+        }    
+        if (window.innerWidth < 1500) {
+            n=3
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: n,
+                spaceBetween: 20,
                 freeMode: true,
                 pagination: {
                 el: ".swiper-pagination",
@@ -318,7 +337,7 @@
             n=3
             var swiper = new Swiper(".mySwiper", {
                 slidesPerView: n,
-                spaceBetween: 30,
+                spaceBetween: 10,
                 freeMode: true,
                 pagination: {
                 el: ".swiper-pagination",
@@ -327,10 +346,10 @@
             });
         }
         if (window.innerWidth <= 942 && window.innerWidth >= 768) {
-            n=2
+            n=2.5
             var swiper = new Swiper(".mySwiper", {
                 slidesPerView: n,
-                spaceBetween: 30,
+                spaceBetween: 8,
                 freeMode: true,
                 pagination: {
                 el: ".swiper-pagination",
@@ -338,6 +357,20 @@
                 },
             });
         }
+        if (window.innerWidth < 768 && window.innerWidth >= 320) {
+            n=1.5
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: n,
+                spaceBetween: 2,
+                freeMode: true,
+                pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                },
+            });
+        }
+
+    
       </script>
 </body>
 </html>

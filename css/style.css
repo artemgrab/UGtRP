@@ -99,9 +99,6 @@ nav {
     margin-left: auto;
 }
 
-header {
-    
-}
 
 h1 {
     font-size: 35px;
@@ -872,3 +869,9 @@ header {
 }
 
 
+nav >label {
+    display: none;
+}
+nav >input {
+    display: none;
+}
