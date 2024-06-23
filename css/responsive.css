@@ -349,7 +349,7 @@
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;    
-        grid-gap: 5px;
+        grid-gap: 10px;
     }
     .partner {
         margin-top: 7px;
@@ -365,55 +365,80 @@
         margin-left: 10px;
     }
     .swiper-wrapper{
-        grid-gap: 3px;
+        grid-gap: 10px;
     }
     .img-guns > img{
-        width: 360px;
-        margin-top: 100px;
-        margin-left: -95px;
-        display: none;
+        width: 350px;
+        margin-top: 273px;
+        margin-left: -360px;
+        
     }
 
     .img-furniture > img{
-        width: 360px;
-        margin-top: 40px;
-        margin-left: -65px;
-        display: none;
+        width: 340px;
+        margin-top: 220px;
+        margin-left:  -316px;
+        
     }
 
     .img-clothes > img{
-        width: 360px;
-        margin-top: 20px;
-        margin-left: -65px;
-        display: none;
+        width: 330px;
+        margin-top: 220px;
+        margin-left: -316px;
+        
     }
+    .desc_block_guns > .layout_container > .wrapper > .desc-text >.buttons  {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .desc_block_guns > .layout_container > .wrapper > .desc-text >.buttons  > .third{
+        margin-left: 0;
+    }
+    .desc_block_furniture > .layout_container > .wrapper > .desc-text >.buttons  {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .desc_block_furniture > .layout_container > .wrapper > .desc-text >.buttons  > .third{
+        margin-left: 0;
+    }
+    .desc_block_clothes > .layout_container > .wrapper > .desc-text >.buttons  {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .desc_block_clothes > .layout_container > .wrapper > .desc-text >.buttons  > .third{
+        margin-left: 0;
+    }
+    
     .desc_block_guns, .desc_block_furniture, .desc_block_clothes {
-        height: 310px;
+        height: 500px;
     }
     .desc_block_guns > .layout_container > .wrapper > .desc-text > .buttons {
-        margin-top: 50px;
+        margin-top: 250px;
     }
     .desc_block_furniture > .layout_container > .wrapper > .desc-text > .buttons {
-        margin-top: 50px;
+        margin-top: 250px;
     }
     .desc_block_clothes > .layout_container > .wrapper > .desc-text > .buttons {
-        margin-top: 50px;
+        margin-top: 250px;
     }
 
     .desc_block_guns > .layout_container > .wrapper > .desc-text > h1 {
         font-weight: 700;
         margin-bottom: 0;
-        padding-top: 48px;
+        padding-top: 28px;
     }
     .desc_block_furniture > .layout_container > .wrapper > .desc-text > h1 {
         font-weight: 700;
         margin-bottom: 0;
-        padding-top: 48px;
+        padding-top: 28px;
     }
     .desc_block_clothes > .layout_container > .wrapper > .desc-text > h1 {
         font-weight: 700;
         margin-bottom: 0;
-        padding-top: 48px;
+        padding-top: 28px;
     }
     /* burger */
     nav >label {
@@ -537,8 +562,26 @@
     max-width: 300px;
     max-height: auto;
     display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 31px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 7px;
+
+}
+.right-block-foot {
+    margin-top: 0px;
+
+}
+.right-block-foot > ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: left; 
+    justify-content: left;
+}
+footer {
+    margin-top: 54px;
+    background-color: #222222;
+    display: block;
+    padding: 0 10px 0 10px;
+    
 }
 }
