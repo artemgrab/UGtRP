@@ -368,23 +368,42 @@
         grid-gap: 10px;
     }
     .img-guns > img{
-        width: 350px;
-        margin-top: 273px;
-        margin-left: -360px;
+        width: 340px;
+        margin-top: 265px;
+        margin-left: -318px;
+        
+    }
+    .img-guns {
+        margin-top: -130px;
+        margin-left: auto;
+        margin-right: 0px;
+    
+    }
+    .img-furniture {
+        margin-top: -10px;
+        margin-left: auto;
+        margin-right: 0px;
+    
+    }
+    
+    .img-clothes {
+        margin-left: auto;
+        margin-right: 0px;
+        margin-top: 8px;
         
     }
 
     .img-furniture > img{
         width: 340px;
-        margin-top: 220px;
-        margin-left:  -316px;
+        margin-top: 210px;
+        margin-left:  -319px;
         
     }
 
     .img-clothes > img{
         width: 330px;
-        margin-top: 220px;
-        margin-left: -316px;
+        margin-top: 210px;
+        margin-left: -310px;
         
     }
     .desc_block_guns > .layout_container > .wrapper > .desc-text >.buttons  {
