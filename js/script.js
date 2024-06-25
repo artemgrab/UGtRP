@@ -66,6 +66,7 @@ for (let i = 0; i < b3.length; i++) {
 }
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const buttonPartners = document.getElementById('button-partners');
     const blockPartner1 = document.querySelector('.block-partner-1');
@@ -182,3 +183,4 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
+ 
