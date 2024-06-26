@@ -963,3 +963,157 @@ ol > li {
 .foot-qa {
     margin-top: 150px;
 }
+
+.dev {
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    display: table;
+    margin: 0 auto;
+    padding-top: 135px;
+    padding-bottom: 69px;
+}
+
+.developers {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.dev-i {
+    background-color: #252525;
+    width: 409px; 
+    height: 530px;
+    border-radius: 45px;
+    margin-left: 66px;
+    position: relative;
+}
+
+.dev-i > img {
+    margin-top: 37px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    width: 176px;
+    height: 1px;
+    border-radius: 9px;
+    background-color: rgba(255,255,255,0.76);
+}
+
+.developers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.nick {
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 22px;
+}
+
+.developers article:first-child {
+    margin-left: 0;
+}
+/* .developers article:last-child {
+    margin-left: 100px;
+} */
+
+.dev-desc {
+    margin-top: 27px;
+    line-height: 1.5;
+    max-width: 316px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.links-dev {
+   margin-top: 45px;
+}
+.links-dev1 {
+   margin-top: 64px;
+}
+
+
+
+
+.helpers {
+    max-width: 884px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.help-i {
+    background-color: #252525;
+    width: 409px; 
+    height: 530px;
+    border-radius: 45px;
+    margin-left: 66px;
+    position: relative;
+}
+
+.help-i > img {
+    margin-top: 37px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    width: 176px;
+    height: 1px;
+    border-radius: 9px;
+    background-color: rgba(255,255,255,0.76);
+}
+
+.helpers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-top: 0;
+}
+
+.nick {
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 22px;
+}
+
+.helpers article:first-child {
+    margin-left: 0;
+}
+
+
+.help-desc {
+    margin-top: 27px;
+    line-height: 1.5;
+    max-width: 316px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+.help {
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    display: table;
+    margin: 0 auto;
+    padding-top: 135px;
+    padding-bottom: 44px;
+}
