@@ -39,13 +39,12 @@ function cycleBlocks() {
     }
 }
 
-// Initially show the first block
+
 showBlock(currentBlock);
 
-// Set up the interval to cycle through blocks every 20 seconds
 setInterval(cycleBlocks, 8000);
 
-// Optional: add event listeners if you still want manual control
+
 for (let i = 0; i < b1.length; i++) {
     b1[i].addEventListener('click', function() {
         currentBlock = 1;
