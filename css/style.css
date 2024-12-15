@@ -48,6 +48,27 @@ nav > ul > li > a {
     font-family: Arial, sans-serif;
     font-size: 16px;
     letter-spacing: 2px;
+    position: relative; 
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+nav > ul > li >a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; 
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: width 0.3s ease; 
+}
+
+nav > ul > li > a:hover {
+    font-size: 17px; 
+}
+
+nav > ul > li > a:hover::after {
+    width: 100%; 
 }
 
 header > .layout_container {
@@ -83,6 +104,10 @@ li + li {
 nav {
     margin-right: 0px;
     margin-left: auto;
+}
+
+.mainmenubtn {
+    margin-top: 4px;
 }
 
 .dropdown-child {
@@ -134,6 +159,14 @@ nav {
     margin-top: 53px;
 }
 
+.list-of-icons > a > img {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.list-of-icons > a > img:hover {
+    transform: scale(1.08);
+}
+
 .download-block > p {
     font-size: 32px;
     font-weight: 700;
@@ -178,10 +211,213 @@ nav {
     padding: 12px 89px;
     border-radius: 8px;
     margin-top: 51px;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+.btn-download:hover {
+
+    background-color: #FF9303;
+
 }
 
 .btn-download > a {
     color: rgb(2, 25, 53);
     font-size: 16px;
     font-weight: 700;
+}
+
+.desc {
+    background: linear-gradient(-76deg, rgba(247,171,40,1) 0%, rgba(233,95,42,1) 57%100%);
+    height: 410px;
+    margin-top: 95px;
+}
+
+.desc-text > h1 {
+    font-size: 35px;
+    font-weight: 700;
+    padding-bottom: 11px;
+    padding-top: 54px;
+    margin: 0
+}
+
+.desc-text > ul {
+    display: flex;
+    gap: 22px;
+}
+
+.desc-text > ul > li {
+    margin: 0;
+    font-size: 14px;
+    color: #F5F5F5;
+}
+
+.desc-text > p {
+    font-size: 18px;
+    margin-top: 55px;
+} 
+
+.buttons > li > button {
+    background-color: #D74C16;
+    cursor: pointer;
+    width: 140px;
+    height: 13px;
+    border-radius: 3px;
+    border: none;
+    padding: 0;
+}
+
+.buttons {
+    margin-top: 147px;
+}
+
+.buttons > li+li {
+    margin-left : -9px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-guns {
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: 20px;
+
+}
+
+.buttons > li > .b-active {
+    background-color: #AF3100;
+}
+
+.buttons > li > .b-notactive {
+    background-color: #D74C16;
+}
+.buttons > li > .b-notactive:hover {
+    background-color: #A7370C;
+}
+
+/* .slider {
+    position: absolute;
+    width: 80%;
+    height: 409px;
+    overflow: hidden;
+}
+
+.slider-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 30px;
+    pointer-events: none;
+    transition: 0s ease-in;
+}
+
+.slide {
+    height: 100%;
+    background-color: antiquewhite;
+    padding:3rem;
+} */
+
+
+.slider-wrap {
+    position: absolute;
+    width: 90%;
+    height: 409px;
+    cursor: grab;
+    margin-top: 28px;
+}
+  
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+}
+  
+.slider-inner {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    gap: 30px;
+}
+  
+.item {
+    width: 359px;
+    height: 409px;
+    border-radius: 18px 18px 0 0;
+    background-color: #161616;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+  
+.prog-bar-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(62, 62, 62);
+}
+  
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+  
+
+.slider {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.news-block {
+    margin-top: 78px;
+}
+
+.text-news {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.news-top {
+    height: 205px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/news-img/news-4.png');
+}
+
+.news-bottom {
+    padding: 22px 20px 19px 20px;
+}
+
+.news-bottom > h3 {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+.news-bottom > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 137.2%;
 }
